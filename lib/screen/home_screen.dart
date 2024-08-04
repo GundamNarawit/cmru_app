@@ -1,3 +1,4 @@
+import 'package:cmru_app/widget/my_drawer.dart';
 import 'package:flutter/material.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -10,26 +11,31 @@ class HomeScreen extends StatefulWidget {
 }
 
 class _HomeScreenState extends State<HomeScreen> {
+  String name = "narawit";
+  String accountEmail = "narawit1222@gmail.com";
+  void changeName() {
+    setState(() {
+      name = "Gundam";
+    });
+  }
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-
+drawer:MyDrawer(),
       appBar: AppBar(
-        title: const Text('เมูนด้านบน'),
+        title: const Text(
+          'HOMEIE',
+          style: TextStyle(color: Colors.white)
+          ),
         backgroundColor:Colors.blue,
       ),        
   body:Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
-            const Text(
-              'Home Screen',
-            ),
-          ],
-        ),
-      ),        
-
-
+        child: Text("Hello $name")
+    ),
+floatingActionButton: FloatingActionButton(
+  onPressed: changeName,
+  child: Icon(Icons.add),
+),
     );
   }
 }

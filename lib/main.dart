@@ -1,3 +1,4 @@
+import 'package:cmru_app/screen/about_screen.dart';
 import 'package:cmru_app/screen/home_screen.dart';
 import 'package:flutter/material.dart';
 
@@ -22,7 +23,7 @@ class MyApp extends StatelessWidget {
 
       routes: {
         '/home': (context) => const HomeScreen(),
-        '/about': (context) => const Placeholder(),
+        '/about': (context) => const AboutScreen(),
       },
 
 
