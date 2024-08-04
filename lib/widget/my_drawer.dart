@@ -18,8 +18,11 @@ return Drawer(
     children: [
       UserAccountsDrawerHeader(
        currentAccountPicture: CircleAvatar(
-        child: Icon(Icons.account_circle),
+        child: Icon(Icons.account_circle)
+        
+        
        ),
+       currentAccountPictureSize: Size(50, 50),
         accountName: Text("$name"), 
         accountEmail: Text("$accountEmail")
         ),
